@@ -1,0 +1,15 @@
+Binaries
+DerivedDataCache
+Intermediate
+Build
+
+Saved/Autosaves/
+Saved/Collections/
+Saved/Logs/
+Saved/SourceControl/
+Saved/UnrealBuildTool/
+Saved/AutoScreenshot.png
+
+.vs
+.vsconfig
+*.sln
