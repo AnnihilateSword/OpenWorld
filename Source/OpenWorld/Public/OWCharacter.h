@@ -34,6 +34,9 @@ public:
 	void Look(const FInputActionValue& value) noexcept;
 
 private:
+	/***************/
+	/** Properties */
+	/***************/
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LayerTop|Camera", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USpringArmComponent> m_SpringArmComponent{};
 
