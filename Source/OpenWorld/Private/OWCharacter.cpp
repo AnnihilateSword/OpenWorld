@@ -8,6 +8,8 @@
 #include <Camera/CameraComponent.h>
 #include <EnhancedInputSubsystems.h>
 #include <EnhancedInputComponent.h>
+#include <Kismet/GameplayStatics.h>
+#include <Sound/SoundCue.h>
 
 AOWCharacter::AOWCharacter()
 {
@@ -98,5 +100,10 @@ void AOWCharacter::Look(const FInputActionValue& value) noexcept
 		AddControllerPitchInput(value.Get<FVector2D>().Y);
 		AddControllerYawInput(value.Get<FVector2D>().X);
 	}
+}
+
+void AOWCharacter::PlayFootstepAudio(bool bIsLeftFoot) noexcept
+{
+	UGameplayStatics::PlaySoundAtLocation(this, m_CueFootstep, GetActorLocation());
 }
 
